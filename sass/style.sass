@@ -1,0 +1,485 @@
+$fonts: 'Open Sans', sans-serif
+$dark-gray: #313332
+
+*
+	box-sizing: border-box
+	margin: 0
+	padding: 0
+
+body 
+	font: 100% $fonts
+
+.container 
+	max-width: 1200px
+	margin: 50px auto
+
+h1 
+	font-size: 30px	
+
+h2
+	padding: 5px
+
+.col-2 
+	width: 16.66%
+.col-3 
+	width: 25%
+.col-4 
+	width: 33.33%
+.col-6 
+	width: 50%
+.col-8 
+	width: 66.66%
+.col-12 
+	width: 100%
+
+.clearfix
+	content: ''
+	display: table
+	clear: both	
+
+.row::before,
+.row::after
+	@extend .clearfix
+
+/* ============ NAVIGATION =========== */
+
+header 
+	background-color: $dark-gray
+	min-height: 50px
+
+	nav:before,
+	nav:after 
+		@extend .clearfix
+		
+nav.container
+	margin: 0 auto
+
+nav
+	img
+		padding: 10px 0	
+
+	ul
+		list-style-type: none
+		float: right
+		font-size: 0
+
+	li
+		display: inline-block
+		font-size: 16px
+
+	a 
+		height: 100%
+		padding: 0 20px
+		display: block
+		color: #fff
+		text-decoration: none
+		text-transform: uppercase
+		font-weight: bold
+		font-size: .8em
+		line-height: 55px
+
+/* ============ JUMBOTRON =========== */
+
+.hero 
+	height: 700px
+	background-image: url('https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/F5K7EFVE4Y.jpg')
+	background-size: cover
+
+
+.slogan 
+	background: rgba(44, 39, 38, .8)
+	float: right
+	width: 35%
+	max-width: 800px
+	position: relative
+	top: 50%
+	transform: translateY(-50%)
+
+	h1 
+		color: #fff
+		font-size: 30px
+		padding: 40px 200px 40px 40px
+
+	span 
+		color: pink
+		
+.vertical-position 
+	position: relative
+	bottom: -95%
+	margin-left: 46%
+
+	.circle 
+		width: 20px
+		height: 20px
+		border-radius: 100%
+		background-color: gray
+		margin: 0 10px
+
+	.white 
+		background-color: #fff
+
+.circle,
+.vertical-position 
+	display: inline-block
+
+/* ============ BENEFITS SECTION =========== */
+
+[class*='col-'] 
+	float: left 
+	text-align: center
+
+.benefits 
+	.col-4 
+		padding: 50px	
+	.col-4 p,
+	.col-12 p 
+		color: #a0a0a0
+	.col-12 h2 
+		font-size: 30px
+		margin-top: 100px
+		font-weight: bold
+
+	.icon-btn 
+		width: 90px
+		height: 90px
+		line-height: 90px
+		border: none
+		border-radius: 25%
+		background-color: $dark-gray
+		color: #fff
+		font-size: 50px
+		margin: 15px
+		cursor: pointer
+
+	.icon-btn,
+	.benefit-hover 
+		transition: .8s
+
+/* ============ GALLERY =========== */
+
+.gallery 
+	line-height: 0	
+
+	[class*='col-'] 
+		float: left
+		height: 250px
+	[class*='img']
+		background-size: cover
+		background-position: center
+		
+	.img1,
+	.img3,
+	.img8,
+	.img10 
+		background-image: url('https://static.pexels.com/photos/3797/black-and-white-sport-fight-boxer.jpg')
+
+	.img2,
+	.img4,
+	.img7,
+	.img9 
+		background-image: url('https://static.pexels.com/photos/650/people-men-fight-challenge.jpg')
+
+	.img5,
+	.img6 
+		background-image: url('https://static.pexels.com/photos/160920/kickboxer-girl-kickboxing-athletic-girl-160920.jpeg')
+		
+	i 
+		background-color: #fff
+		color: #484848
+		padding: 5px
+		border-radius: 20%
+		cursor: pointer
+		margin: 0 25px
+		font-size: 16px
+		
+.layer 
+	line-height: 250px
+	font-size: 0
+	display: none 
+
+/* ============ TEAM =========== */
+
+.team 
+	.row 
+		overflow: hidden
+		margin-top: 80px
+
+	[class*="col-"] 
+		float: left
+		min-height: 1px
+
+	.col-4 
+		text-align: center
+		min-width: 200px  
+
+	.image 
+		width: 200px
+		height: 200px
+		border-radius: 50%
+		overflow: hidden
+		position: relative
+		margin: 0 auto
+
+	.image img.pic1 
+		max-width: 150%
+
+	.image img.pic2 
+		max-width: 100%
+
+	.image img.pic3 
+		max-width: 150%
+
+/* ============ PICTURE =========== */
+
+.picture
+	img
+		float: right
+		height: 400px
+		border: none
+		border-radius: 10px
+
+	.container 
+		height: 400px
+		margin-top: 150px
+
+	.left p,
+	.right p 
+		text-align: left
+		padding: 50px
+
+/* ============ NUMBERS =========== */
+.numbers
+	.number h1 
+		font: 80px 'Bevan', cursive
+
+	div.col-3 h2 
+		padding: 0
+		color: #00c7e8
+		text-transform: uppercase
+		font-size: 18px
+
+	.container 
+		margin-top: 100px
+
+/* ============ FOOTER =========== */
+
+footer 
+	background-color: $dark-gray
+	padding: 30px 0
+
+	h2 
+		color: #fff
+		text-transform: uppercase
+		font-size: 25px
+		font-weight: bold
+
+	div.col-4 h2,
+	div.col-4 h3,
+	div.col-4 p 
+		text-align: left	
+
+	div.col-4  p 
+		padding-right: 30px
+		color: #c0bfc0
+		word-break: break-word
+
+	div.col-6 p 
+		padding-right: 0
+
+	.margin-left 
+		padding-left: 30px
+		padding-right: 0
+
+	div.col-4 h3 
+		color: #fff
+
+	div.row.container 
+		margin-bottom: 0
+		margin-top: 0
+
+	div.social 
+		text-align: left
+
+	button.social-btn
+		width: 40px
+		height: 40px
+		line-height: 40px
+		border: none
+		background-color: #00c7e8
+		color: #fff
+		font-size: 30px
+		margin: 8px
+		cursor: pointer
+
+/* For tablets: */
+@media (max-width: 767px) 
+	.col-s-1 
+		width: 8.33%
+	.col-s-2 
+		width: 16.66%
+	.col-s-3 
+		width: 25%
+	.col-s-4 
+		width: 33.33%
+	.col-s-5 
+		width: 41.66%
+	.col-s-6 
+		width: 50%
+	.col-s-7 
+		width: 58.33%
+	.col-s-8 
+		width: 66.66%
+	.col-s-9 
+		width: 75%
+	.col-s-10 
+		width: 83.33%
+	.col-s-11 
+		width: 91.66%
+	.col-s-12 
+		width: 100%
+	    
+	nav 
+		ul 
+			float: none
+			text-align: center
+	
+		li 
+			display: block
+		
+		a 
+			font-size: 16px
+	
+		img.logo 
+			display: block
+			margin: 0 auto
+	
+	.hero 
+		height: 100vh
+	
+		div.vertical-position 
+			display: none	
+	
+		.slogan h1 
+			color: #fff
+			font-size: 20px
+			padding: 20px
+	
+	.benefits 
+		.col-s-12 
+			padding: 50px
+
+		.col-s-12 h2 
+			margin-top: 50px
+		
+		div.col-12.col-s-12 
+			padding-bottom: 10px	
+			
+	.gallery [class*='col-'] 
+		height: 30vh	
+		
+	.team 
+		div.col-4 
+			float: none
+			display: block
+			margin: 50px auto
+		
+		div.col-4 img 
+			margin: 0 auto
+			display: block
+		
+		.layer p 
+			display: none
+		
+	.picture 
+		div.col-s-12 img
+			margin: 0 auto
+			float: none
+		
+		div.col-6.left p, 
+		div.col-6.right p 
+			padding-top: 15px	
+		
+	.numbers 
+		div.number h1 
+			font-size: 60px	
+		
+	footer 
+		div.col-s-12 
+			padding-top: 20px	
+		
+		div.col-s-12 h2 
+			text-align: center	
+			padding-bottom: 15px
+	
+/* For desktop: */
+@media (min-width: 768px) 
+	.col-m-1 
+		width: 8.33%
+	.col-m-2 
+		width: 16.66%
+	.col-m-3 
+		width: 25%
+	.col-m-4 
+		width: 33.33%
+	.col-m-5 
+		width: 41.66%
+	.col-m-6 
+		width: 50%
+	.col-m-7 
+		width: 58.33%
+	.col-m-8 
+		width: 66.66%
+	.col-m-9 
+		width: 75%
+	.col-m-10 
+		width: 83.33%
+	.col-m-11 
+		width: 91.66%
+	.col-m-12 
+		width: 100%
+    
+	nav 
+		a
+			&:hover 
+				background-color: #3d3f3e	
+				color: #00c7e8
+	
+	.benefits
+		.icon-btn
+			&:hover 
+				background-color: #00c7e8	
+				transform: scale(1.10)
+
+	.benefit-hover:hover 
+		color: #00c7e8
+	
+	
+	.gallery [class*='col-']:hover .layer 
+		display: block
+		background: rgba(0, 0, 0, 0.5)
+	
+	
+	.team .layer 
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		transition: .8s
+	
+
+	.team .layer p 
+		color: #fff
+		line-height: 200px
+		margin: 0
+		opacity: 0
+		transition: .8s
+	
+
+	.team .image:hover .layer 
+		background: rgba(0, 0, 0, .5)
+	
+	
+	.team .image:hover .layer p 
+		opacity: 1
+	
