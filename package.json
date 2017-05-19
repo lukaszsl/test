@@ -1,0 +1,28 @@
+{
+  "name": "kodilla-grunt-test",
+  "version": "1.0.0",
+  "description": "\"test grunt project\"",
+  "main": "script.js",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "kodills-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukaszsl/test.git"
+  },
+  "keywords": [
+    "grunt"
+  ],
+  "author": "Lukasz Sliczner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukaszsl/test/issues"
+  },
+  "homepage": "https://github.com/lukaszsl/test#readme"
+}
