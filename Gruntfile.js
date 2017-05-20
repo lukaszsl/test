@@ -3,29 +3,37 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-  	sass: {
-      options: {
-        sourceMap: true
-      },
-      dist: {
-        files: {
-          'css/style.css': 'sass/*.sass'
-        }
-      }
-    },
     watch: {
-      scripts: {
-          files: ['sass/*.sass'],
-          tasks: ['sass'],
-          options: {
-              spawn: false,
-          },
-      }   
-    }
+          files: 'test/sass/**/*.sass',
+          tasks: ['sass']
+    },
+  	sass: {
+            dev: {
+                files: {
+                    'css/style.css': 'sass/style.sass'
+                }
+            }
+        },
+    
+    browserSync: {
+            dev: {
+                bsFiles: {
+                    src : [
+                        'css/*.css',
+                        'test/*.html'
+                    ]
+                },
+                options: {
+                    watchTask: true,
+                    server: './test'
+                }
+            }
+        }
   });
   // Load the plugins tasks 
-  grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-browser-sync');
   // Default task(s).
-  grunt.registerTask('default', ['sass', 'watch']);
+  grunt.registerTask('default', ['browserSync', 'watch']);
 };
